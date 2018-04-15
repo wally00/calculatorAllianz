@@ -1,17 +1,10 @@
-/*
-
-//asta este functia pentru cautare
-var testez = primeAllianz.find(function (obj) { return obj.TIP === 'Laptop' && obj.AD12 === 149; });
-console.log(testez.TIP + testez.AD12 + testez.FRANSIZA);
-*/
-
 $(function () {
 
     var euroValue = 4.6332;
     $('#euroValue').html(euroValue);
 
 
-        
+
     function hideShow() {
         if ($('#tipProdus').val() === 'Telefon mobil') {
             $('#EW').addClass('d-none');
@@ -48,15 +41,26 @@ $(function () {
 
         var pretPrima = primeAllianz.find(function (obj) {
             return obj.TIP === tipProdus && obj.MIN <= pretEuro && obj.MAX > pretEuro;
+
         });
 
+        if (pretPrima === undefined) {
+            $('#notificationMessage').html('Pretul este prea mare! Nu exista asigurare pentru acest produs.').removeClass('bg-warning bg-info').addClass('bg-danger');
+            $('#primaIncasat').html('-');
+            $('#fransiza').html('-');
+        } else {
+            $('#notificationMessage').html('Pretul in euro este: ' + pretEuro + '&#8364; ' + '<br>' + ' Codul din iStyle SHOP este: ' + pretPrima[tipServiciu + '_COD']);
+            $('#notificationMessage').removeClass('bg-warning bg-danger').addClass('bg-info');
 
-        $('#primaIncasat').html(pretPrima[tipServiciu]);
-        //console.log(pretPrima[tipServiciu]);
+            $('#primaIncasat').html(pretPrima[tipServiciu]);
+            $('#fransiza').html(pretPrima.FRANSIZA);
+            console.log('if');
 
-        $('#fransiza').html(pretPrima.FRANSIZA);
+        }
 
-        $('#notificationMessage').html('Pretul in euro este: ' + pretEuro + '&#8364; ' + '<br><br>' + ' Codul din iStyle SHOP este: ' + pretPrima[tipServiciu + '_COD']);
+        //$('#notificationMessage').html('Pretul in euro este: ' + pretEuro + '&#8364; ' + '<br><br>' + ' Codul din iStyle SHOP este: ' + pretPrima[tipServiciu + '_COD']);
+
+
         $('#notificationMessage').removeClass('d-none');
     });
 
