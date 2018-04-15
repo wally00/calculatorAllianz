@@ -1,0 +1,34 @@
+/* var euroValue = 4.6332;
+
+
+document.getElementById('euroValue').innerHTML = euroValue;
+
+//console.log(primeAllianz);
+
+//asta este functia pentru cautare
+var testez = primeAllianz.find(function (obj) { return obj.TIP === 'Laptop' && obj.AD12 === 149; });
+console.log(testez.TIP + testez.AD12 + testez.FRANSIZA);
+
+
+function calculeaza() {
+
+    
+    //get the inserted value
+    var tipProdus = document.getElementById('tipProdus').value;
+    var pretProdus = document.getElementById('pretProdus').value;
+    var tipServiciu = document.getElementById('tipServiciu').optSelected;
+    var perioadaServiciu = document.getElementById('perioadaServiciu').value;
+
+    
+    //convert to euro and round to 2 decimals <-- transfered
+    var pretEuro = Math.round((pretProdus / euroValue) * 100) / 100;
+
+    //write the value to a 'notification'
+    //document.getElementById('notificationMessage').innerHTML = pretEuro;
+
+    var notification = tipProdus + ' ' + pretEuro + '&#8364; ' + tipServiciu + ' ' + perioadaServiciu;
+    document.getElementById('notificationMessage').innerHTML = notification;
+    document.getElementById('notificationMessage').classList.remove('d-none');
+
+    
+} */

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Calculator ALLIANZ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS STYLES -->
+    <!-- EXTERNAL BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- LOCAL STYLE.CSS -->
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body class="text-center">
+    <header>
+        <nav class="navbar">
+            <div class="navbar navbarRed"> <img class="logoI" src="img/istyleBk.png" alt="iStyleLogo"> </div>
+            <div class="navbar navbarBlue"> <img class="logoA" src="img/allianztiriac2.png" alt="allianzLogo"> </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center ">Calculator Prime ALLIANZ</h1>
+                <p>Calculator prime pentru Asigurare si Extragarantie</p>
+            </div>
+            <div id="notificationMessage" class="d-none bg-warning align-items-center p-3 text-white-50 rounded box-shadow"> Pentru acest tip de asigurare se va emite automat si polita de extragarantie pentru 12 luni </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow card-body">
+                        <div class="form-group">
+                            <label for="euroValue">Curs valutar EURO/LEU:</label>
+                            <!-- <input id="euroValue" class="form-control" type="number" value="4.65"> 
+                                -->
+                            <h1>
+                                <span>1 leu</span>
+                                <span>=</span>
+                                <span id="euroValue">.</span>
+                                <span>&#8364;</span></h1>
+                            <p class="text-muted">Cursul valutar este actualizat de pe <a href="#">www.cursbnr.ro</a><br>--nefunctional inca--</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow card-body">
+                        <div class="form-group">
+                            <label for="tipProdus"> Selecteaza produs</label>
+                            <select id="tipProdus" class="form-control">
+                                <option value="Desktop PC">Desktop</option>
+                                <option value="Laptop">Laptop</option>
+                                <option value="Tableta">Tableta</option>
+                                <option value="Telefon mobil">Telefon Mobil</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pretProdus">Pretul FARA discount</label>
+                            <input id="pretProdus" class="form-control" type="number" placeholder="2999" autofocus> </div>
+                        <div class="form-group">
+                            <label for="tipServiciu">Asigurare/Extragarantie</label>
+                            <select id="tipServiciu" class="form-control">
+                                <option id="AD12" value="AD12">Asigurare 12 luni</option>
+                                <option id="AD24" value="AD24">Asigurare 24 luni</option>
+                                <option id="AD24-EW12" value="AD24-EW12">Asigurare 24 luni + Extragarantie 12 luni</option>
+                                <option id="AD-EW-PJ" value="AD-EW-PJ">Asigurare + Extragarantie 24 luni - PJ</option>
+                                <option id="EW" value="EW">Extragarantie 12 luni</option>
+                                <option id="EW-PJ" value="EW-PJ">Extragarantie 24 luni - PJ</option>
+                            </select>
+                        </div>
+                        <!--     <div class="form-group">
+                            <label for="perioadaServiciu">Perioada</label>
+                            <select idS="perioadaServiciu" class="form-control">
+                                <option value="12">12 Luni</option>
+                                <option value="24">24 Luni</option>
+                            </select>
+                        </div>  
+                  -->
+                        <button id="calcBtn" class="btn btn-success">Calculeaza</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow card-body">
+                        <p>Valoarea primei de incasat este:
+                            <br><span id="primaIncasat" class="result">-</span> LEI</p>
+                        <p class="text-danger">Valoarea FRANSIZEI este:
+                            <br><span id="fransiza" class="result">-</span> &#8364;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right"> <a href="#">Back to top</a> </p>
+            <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+            <p>New to Bootstrap? <a href="..">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+        </div>
+    </footer>
+</body>
+<!-- JS FILES -->
+<!-- EXTERNAL jQuery/bootstrap/popper -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- LOCAL SCRIPT.JS -->
+<script src="javascript/prime.json"></script>
+<script src="javascript/script.js"></script>
+
+</html>
