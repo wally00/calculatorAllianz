@@ -7,19 +7,19 @@ $(function () {
 
     function hideShow() {
         if ($('#tipProdus').val() === 'Telefon mobil') {
-            $('#EW').addClass('d-none');
-            $('#AD24-EW12').addClass('d-none');
-            $('#AD-EW-PJ').addClass('d-none');
-            $('#EW-PJ').addClass('d-none');
+            $('#EW').addClass('d-none').prop('disabled', true);
+            $('#AD24-EW12').addClass('d-none').prop('disabled', true);
+            $('#AD-EW-PJ').addClass('d-none').prop('disabled', true);
+            $('#EW-PJ').addClass('d-none').prop('disabled', true);
 
-            $('#AD24').removeClass('d-none');
+            $('#AD24').removeClass('d-none').prop('disabled', false);
         } else {
-            $('#EW').removeClass('d-none');
-            $('#AD24-EW12').removeClass('d-none');
-            $('#AD-EW-PJ').removeClass('d-none');
-            $('#EW-PJ').removeClass('d-none');
+            $('#EW').removeClass('d-none').prop('disabled', false);
+            $('#AD24-EW12').removeClass('d-none').prop('disabled', false);
+            $('#AD-EW-PJ').removeClass('d-none').prop('disabled', false);
+            $('#EW-PJ').removeClass('d-none').prop('disabled', false);
 
-            $('#AD24').addClass('d-none');
+            $('#AD24').addClass('d-none').prop('disabled', true);
         }
     };
 
